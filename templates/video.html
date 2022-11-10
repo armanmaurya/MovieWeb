@@ -1,0 +1,38 @@
+<!-- Code by Brave Coder - https://youtube.com/BraveCoder/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="{%static 'style2.css'%}" />
+    <title>Custom Video Player JavaScript - Brave Coder</title>
+  </head>
+  <body>
+
+    {% for link in links  %}
+    
+    <div class="video">
+      <video id="video"><source src="{{link.video_url}}" type="video/mp4" ></video>
+  </div>
+    
+    
+    
+    
+    {% endfor %}
+    
+
+
+
+
+
+
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+    <script src="{%static 'app.js'%}"></script>
+  </body>
+</html>
