@@ -6,11 +6,12 @@ from .models.Links import Link
 
 def index(request):
     Links = Link.objects.all()
-    Moviename = request.GET.get('MovieName')
-    if Moviename:
-        pass
-    else:
-        pass
+    # Moviename = request.GET.get('MovieName')
+    # if Moviename:
+    #    pass
+    #
+    # else:
+    #     pass
 
     name = {}
     name['Movie_name'] = Links
@@ -30,6 +31,7 @@ def videos(request):
 
     Links = Link.objects.all()
 
+    query = request.GET
     url = {}
     url['links'] = Links
 
